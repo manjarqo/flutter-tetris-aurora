@@ -229,6 +229,7 @@ class _Button extends StatefulWidget {
     Key? key,
     required this.size,
     required this.onTap,
+    // ignore: unused_element
     this.icon,
     this.color = Colors.blue,
     this.enableLongPress = true,
@@ -251,6 +252,7 @@ class _Description extends StatelessWidget {
   const _Description({
     Key? key,
     required this.text,
+    // ignore: unused_element
     this.direction = AxisDirection.down,
     required this.child,
   }) : super(key: key);

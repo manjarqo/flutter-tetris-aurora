@@ -1,0 +1,11 @@
+#!/bin/bash
+file_package=$(ls build/aurora/aurora-arm/$1/RPMS/*.rpm | head -n 1)
+package=$(basename $file_package)
+echo $file_package
+echo $package
+/home/manjarqo/AuroraPlatformSDK/sdks/aurora_psdk/sdk-chroot rpmsign-external sign --key ~/regular_key.pem --cert ~/regular_cert.pem $file_package
+scp $file_package defaultuser@192.168.0.154:/home/defaultuser/Downloads
+./deploy $package
+IFS='-' read -ra app <<< "$package"
+echo $app
+ssh defaultuser@192.168.0.154 $app

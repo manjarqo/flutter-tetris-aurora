@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=aurora_tetris
+Comment=A new Flutter project.
+Icon=aurora_tetris.aurora_tetris
+Exec=/usr/bin/aurora_tetris.aurora_tetris
+X-Nemo-Application-Type=silica-qt5
+
+[X-Application]
+Permissions=
+OrganizationName=aurora_tetris
+ApplicationName=aurora_tetris

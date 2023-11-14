@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+set package [lindex $argv 0]
+spawn ssh defaultuser@192.168.0.154 devel-su pkcon -y install-local /home/defaultuser/Downloads/$package
+expect {
+    Password:
+    }
+send "12345\r"
+interact
